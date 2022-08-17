@@ -83,7 +83,7 @@ Use `verification-proof-api` to obtain verification with json string, then store
         }
         ```
 
-2. Obtain verification proof by ClearanceOrder interval
+2. Obtain ITM proof token by ClearanceOrder interval
 
    - API Path：`/ledger/verify/verificationProofClearanceOrder`
 
@@ -107,7 +107,7 @@ Use `verification-proof-api` to obtain verification with json string, then store
         }
         ```
 
-3. Obtain verification Proof by time interval
+3. Obtain ITM proof token by time interval
 
     - API Path：`/ledger/verify/verificationProofQuery`
 
@@ -176,7 +176,7 @@ If verified successfully, the `result.isPass()` will return `true`, otherwise it
 If `result.isPass()` returns `false`, you can check which data is the error by calling `result.getVerifyReceiptResults()`
 ### Verify by Command Line Interface
 
-Enter the following command in CLI with your informations
+Enter the following command in CLI with your information
 
 ```shell
 java -jar spo-verification-program-{VERSION}.jar --proof sample/queryByCO.json --result result.json --infuraProjectId {INFURA_PROJECT_ID}
