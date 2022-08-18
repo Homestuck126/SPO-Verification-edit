@@ -13,5 +13,5 @@
 5. Enter project name，and click CREATE
    ![](https://i.imgur.com/26dhmMa.png)
 
-6. Choose Rinkey in the ENDPOINTS MENU，and copy the URL and paste to the `nodeURL` columns which is in the configuration file[config.h](../example/spo-client-example/config.h)
+6. Choose Rinkeby in the ENDPOINTS MENU，and copy the URL and paste to the `nodeURL` columns which is in the configuration file. The url consists of "https:// + enviornment name in lower case + .infura.io/v3/ + infuraProjectId. [config.h](../spo-verification-program/src/main/java/com/itrustmachines/verification/config/InfuraNodeUrlConfig.java)
    ![](../image/copy_url.png)
