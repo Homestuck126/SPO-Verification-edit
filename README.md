@@ -19,7 +19,7 @@
       - [Verify Result](#verify-result)
     - [Verify by Command Line Interface](#verify-by-command-line-interface)
 
-## Requirement
+## Requirements
 
 - Java 8 or higher
 - Maven
@@ -28,10 +28,10 @@
 - Infure Node URL
   - Please refer to [Infura Tutorial](./doc/infura_en.md)
 
-## Configure the settings for Sample Code
-This configuration file is very important. Main program use this configuration file to import ITM packages.
+## Configure the settings for the Sample Code
+This configuration file is very important. The Main program uses this configuration file to import ITM packages.
 
-Create settings.xml in your .m2 folder and copy following setting into the file
+Create settings.xml in your .m2 folder and copy the following settings into the file
 ```
 <settings>
   <servers>
@@ -48,9 +48,9 @@ Create settings.xml in your .m2 folder and copy following setting into the file
 
 ### SPO Server
 
-Using `verification-proof-api` to obtain verification with json string then store in file with json format. Please refer to [SPO Server API](https://azure-prod-rinkeby.itm.monster:4430/swagger-ui/) for more informations
+Use `verification-proof-api` to obtain verification with json string, then store in the file with json format. Please refer to [SPO Server API](https://azure-prod-rinkeby.itm.monster:4430/swagger-ui/) for more information.
 
-1. Obtain verification proof by multi ClearanceOrder and IndexValue
+1. Obtain the ITM proof token (verification proof) by using multiple ClearanceOrder and IndexValue
 
    - API Path：`/ledger/verify/verificationProof`
    - Request Body：
@@ -83,7 +83,7 @@ Using `verification-proof-api` to obtain verification with json string then stor
         }
         ```
 
-2. Obtain verification proof by ClearanceOrder interval
+2. Obtain ITM proof token by ClearanceOrder interval
 
    - API Path：`/ledger/verify/verificationProofClearanceOrder`
 
@@ -107,7 +107,7 @@ Using `verification-proof-api` to obtain verification with json string then stor
         }
         ```
 
-3. Obtain verification Proof by time interval
+3. Obtain ITM proof token by time interval
 
     - API Path：`/ledger/verify/verificationProofQuery`
 
@@ -133,14 +133,14 @@ Using `verification-proof-api` to obtain verification with json string then stor
 
 ### Dashboard
 
-1. Enter to Dashboard to choose the data you want to verify
-2. Download the Off-Chain Proof data, namely, verification proof
+1. Enter the Dashboard to choose the data you want to verify.
+2. Download the Off-Chain Proof data, namely, ITM proof token.
 
 ## Verify Procedure
 
 ### Verify by program
 
-  For the following code, pleaser refer to [VerificationApi.java](./src/main/java/com/itrustmachines/verification/VerificationApi.java)
+  For the following code, pleaser refer to [VerificationApi.java](./src/main/java/com/itrustmachines/verification/VerificationApi.java).
 
 #### Establish Verifcation Service
 
@@ -150,9 +150,9 @@ Using `verification-proof-api` to obtain verification with json string then stor
 
 #### Verify
 
-If the verification proof is using private chain, you can assign `null` to infuraProjectId
+If the ITM proof token uses the private chain, you can assign `null` to infuraProjectId.
 
-##### Method 1 : Use json file to verify
+##### Method 1 : Use the json file to verify
 
 - `filePath` : Path of verification file
 - `infuraProjectId` : Enter the infuraProjectId
@@ -172,11 +172,11 @@ final VerifyVerificationProofResult result = verificationApi.verifyJsonString(js
 
 #### Verify Result
 
-If verified successfully, the `result.isPass()` will return `true`, otherwise return `false`.
-If `result.isPass()` is return `false`, you can check which data is error by calling `result.getVerifyReceiptResults()`
+If verified successfully, the `result.isPass()` will return `true`, otherwise it return `false`.
+If `result.isPass()` returns `false`, you can check which data is the error by calling `result.getVerifyReceiptResults()`
 ### Verify by Command Line Interface
 
-Enter the following command in CLI with your informations
+Enter the following command in CLI with your information:
 
 ```shell
 java -jar spo-verification-program-{VERSION}.jar --proof sample/queryByCO.json --result result.json --infuraProjectId {INFURA_PROJECT_ID}
