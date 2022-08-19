@@ -140,7 +140,7 @@ Use `verification-proof-api` to obtain verification with json string, then store
 
 ### Verify by program
 
-  For the following code, pleaser refer to [VerificationApi.java](./src/main/java/com/itrustmachines/verification/VerificationApi.java).
+  For the following code, pleaser refer to [VerificationApi.java](./spo-verification-program/src/main/java/com/itrustmachines/verification/VerificationApi.java).
 
 #### Establish Verifcation Service
 
