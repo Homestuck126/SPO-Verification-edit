@@ -48,7 +48,7 @@ Create settings.xml in your .m2 folder and copy the following settings into the 
 
 ### SPO Server
 
-Use `verification-proof-api` to obtain verification with json string, then store in the file with json format. Please refer to [SPO Server API](https://azure-prod-rinkeby.itm.monster:4430/swagger-ui/) for more information
+Use `verification-proof-api` to obtain verification with json string, then store in the file with json format. Please refer to [SPO Server API](https://azure-prod-rinkeby.itm.monster:4430/swagger-ui/) for more information.
 
 1. Obtain the ITM proof token by using multiple ClearanceOrder and IndexValue
 
@@ -133,14 +133,14 @@ Use `verification-proof-api` to obtain verification with json string, then store
 
 ### Dashboard
 
-1. Enter the Dashboard to choose the data you want to verify
-2. Download the Off-Chain Proof data, namely, ITM proof token
+1. Enter the Dashboard to choose the data you want to verify.
+2. Download the Off-Chain Proof data, namely, ITM proof token.
 
 ## Verify Procedure
 
 ### Verify by program
 
-  For the following code, pleaser refer to [VerificationApi.java](./src/main/java/com/itrustmachines/verification/VerificationApi.java)
+  For the following code, pleaser refer to [VerificationApi.java](./src/main/java/com/itrustmachines/verification/VerificationApi.java).
 
 #### Establish Verifcation Service
 
@@ -150,7 +150,7 @@ Use `verification-proof-api` to obtain verification with json string, then store
 
 #### Verify
 
-If the ITM proof token uses the private chain, you can assign `null` to infuraProjectId
+If the ITM proof token uses the private chain, you can assign `null` to infuraProjectId.
 
 ##### Method 1 : Use the json file to verify
 
@@ -176,7 +176,7 @@ If verified successfully, the `result.isPass()` will return `true`, otherwise it
 If `result.isPass()` returns `false`, you can check which data is the error by calling `result.getVerifyReceiptResults()`
 ### Verify by Command Line Interface
 
-Enter the following command in CLI with your information
+Enter the following command in CLI with your information:
 
 ```shell
 java -jar spo-verification-program-{VERSION}.jar --proof sample/queryByCO.json --result result.json --infuraProjectId {INFURA_PROJECT_ID}
