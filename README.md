@@ -50,7 +50,7 @@ Create settings.xml in your .m2 folder and copy the following settings into the 
 
 Use `verification-proof-api` to obtain verification with json string, then store in the file with json format. Please refer to [SPO Server API](https://azure-prod-rinkeby.itm.monster:4430/swagger-ui/) for more information.
 
-1. Obtain the ITM proof token by using multiple ClearanceOrder and IndexValue
+1. Obtain the ITM proof token (verification proof) by using multiple ClearanceOrder and IndexValue
 
    - API Path：`/ledger/verify/verificationProof`
    - Request Body：
